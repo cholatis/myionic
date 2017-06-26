@@ -22,5 +22,15 @@
     </ion-item>
     <button ion-button block [disabled]="!f.valid">Add Place</button>
   </form>
-
+  <ion-grid>
+    <ion-row>
+      <ion-col><button ion-button block (click)="onLocateUser()">Locate Me</button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p>Your Location: {{ location?.lat }} / {{ location?.lng}}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
 </ion-content>
